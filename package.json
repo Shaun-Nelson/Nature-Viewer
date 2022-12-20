@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "flickr": "^1.1.0",
+    "flickr-sdk": "^6.0.0",
+    "pexels": "^1.4.0"
+  }
+}
