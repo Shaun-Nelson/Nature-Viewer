@@ -5,6 +5,9 @@
 }
 
 img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* max-width: 100%; */
     height:100vh;
     /* position: relative; */
@@ -12,6 +15,7 @@ img {
 
 .flex-container {
     display: flex;
+    align-items: center;
     justify-content: center;
     text-align: center;
 }
@@ -35,12 +39,17 @@ img {
     border-color: rgba(255,255,255,0.2);
     top:5%;
     padding: 1em;
-    left:35%
+    left:32%
 }
 
 #search-parameters {
-    /* color:white */
+    display: none;
+    color:white;
+    position: absolute;
     z-index: 2;
+    top:12%;
+    font-size: 1em;
+    
 }
 
 #photographer {
@@ -49,4 +58,17 @@ img {
     color:white;
     left: 20px;
     font-size: 1.2em;
+}
+
+@media screen and (min-width:800px) {
+    img {
+        width: 100%;
+        height: 100vh;
+    }
+    #photographer {
+        top: 90vh;
+    }
+    #btn {
+        left: 40%;
+    }
 }
