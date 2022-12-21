@@ -1,7 +1,7 @@
 // import { createClient } from "flickr-sdk";
 const API_KEY = "563492ad6f91700001000001e2f01e5688a94b13b884103cacf2626b";
 const endpoint =
-  "https://api.pexels.com/v1/search/?page=1&per_page=40&query=Nature,animals,jungle,mountains,forest,plants";
+  "https://api.pexels.com/v1/search/?page=1&per_page=40&query=Nature";
 const query = "/search?query=";
 const search = "Nature,animals,jungle,mountains,forest,plants";
 const orient = "&orientation=portait";
@@ -35,9 +35,13 @@ const getPhotos = async (search, handler) => {
 };
 
 const displayRandomPhoto = (data) => {
-  let randomIndex = Math.floor(Math.random() * data.photos.length);
-  let photo = data.photos[randomIndex];
-  img.src = photo.src.portrait;
+  let photo = data.photos[Math.floor(Math.random() * data.photos.length)];
+  while (window.innerWidth >= 800 && photo.width < 1080) {
+    photo = data.photos[Math.floor(Math.random() * data.photos.length)];
+  }
+  window.innerWidth >= 800
+    ? (img.src = photo.src.large2x)
+    : (img.src = photo.src.portrait);
   photographer.innerHTML = `Photographer: ${photo.photographer}`;
 };
 
