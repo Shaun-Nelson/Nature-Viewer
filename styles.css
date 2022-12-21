@@ -5,18 +5,19 @@
     font-family: 'Unbounded', cursive;
 }
 
+body {
+    height: 100%;
+}
+
 .flex-container {
-    display:flex;
+    display: flex;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: auto;
 }
 
 img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     /* max-width: 100%; */
     height:100vh;
     /* position: relative; */
@@ -80,9 +81,7 @@ img {
         width: 100%;
         height: 100vh;
     }
-    #photographer {
-        top: 90vh;
-    }
+    
     #btn {
         left: 40%;
     }
