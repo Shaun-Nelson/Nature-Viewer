@@ -34,7 +34,7 @@ const getPhotos = async (search, handler) => {
 const displayRandomPhoto = (data) => {
   let photo = data.photos[Math.floor(Math.random() * data.photos.length)];
   window.innerWidth >= 800
-    ? (document.body.style.backgroundImage = `url('${photo.src.original}')`)
+    ? (document.body.style.backgroundImage = `url('${photo.src.landscape}')`)
     : (document.body.style.backgroundImage = `url('${photo.src.portrait}')`);
   altText.innerHTML = photo.alt;
   photographer.innerHTML = `Photographer: ${photo.photographer}`;
